@@ -221,30 +221,29 @@ nav.top a:hover {
 
 @media (max-width:500px) {
     nav.top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
         margin: 0;
         padding-bottom: 0;
+        padding-top: 17px;
     }
-
+    nav.top a {
+        margin-right: 0;
+    }
 
     .nav-links {
-        display: flex;
         flex-direction: column;
-        justify-content: space-around;
         width: 100%;
         margin: 20px;
+        align-items: center;
     }
-.nav-links a{
-    font-size: 21px;
-    text-align: center;
-    width: 100%;
-    padding: 20px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-}
+
+    .nav-links a{
+        font-size: 21px;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
 }
 
 
@@ -299,12 +298,15 @@ header {
 
 @media (max-width:500px) {
     .header-content {
-        width: 100%;
+        width: 93%;
         text-align: center;
         font-size: 63px;
-        margin-bottom: 70px;
+        /* margin-bottom: 0px; */
     }
-    
+
+    .header-content button {
+    margin-bottom: 21px;
+    }
 }
 
 /* HEADER-SERVICES */
@@ -376,32 +378,27 @@ header.contact {
         border-bottom: none;
         width: 90%;
         margin-left: 20px;
-
     }
+
     .mdl-img {
         width: 90%;
         margin: 0 auto;
     }
+}
 
-
-    }
-
-
-
-@media (max-width:500px) {
-    
+@media (max-width:500px) {    
     .main-content-top {
         display: flex;
         flex-direction: column;
-        width: 90%;
-        margin: 20px 0;
-      
+        margin-bottom: 20px;
     }
+
     .main-content-top .features, .main-content-top .about{
         width: 100%;
-        margin: 17px 0;
+        margin: 26px 0;
     }
 }
+
 /* SERVICES MAIN CONTENT */
 
 .services-main-content {
@@ -489,39 +486,33 @@ textarea #subject {
     align-items: center;
 }
 
-.main-content-bottom .services,
-.product,
-.vision {
-    width: 30%;
-
-}
-
 @media (max-width:800px) {
     .main-content-bottom {
-
     margin-bottom: 28px;
     height: 222px;
     width: 100%;
     padding: 0 30px;
     border-top: none;
-
     }
-
 }
+
 @media (max-width:500px) {
     .main-content-bottom {
-        flex-direction: column;
-        margin: 70px 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: 440px;
+        padding: 0 20px;
+        margin-bottom: 40px;
     }
 
 .main-content-bottom .services, .product, .vision{
-    flex-direction: column;
-    align-items: center;
     width: 100%;
-    margin: 9px 0;
+    margin: 0px 0;
     padding: 0;
 }
 }
+
 /* SERVICES CONTENT BOTTOM */
 
 .services-bottom-content {
@@ -562,5 +553,4 @@ footer {
         margin: 0 auto;
         line-height: inherit;
     }
-
 }
