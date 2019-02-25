@@ -1,3 +1,556 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+.container-home {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%
+}
 
 
+/* NAV TOP */
+
+.logo {
+    height: 30px;
+}
+
+nav.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+    padding: 25px 0 20px;
+}
+
+.navBar {
+    flex-direction: column;
+    width:100%;
+    justify-content: center;
+    align-items:center;
+}
+
+nav.top a {
+    text-decoration: none;
+    color: grey;
+    margin-right: 20px;
+    text-shadow: 1px 0px grey;
+}
+
+
+nav.top a:hover {
+    color: black;
+}
+
+@media (max-width:800px) {
+    nav.top {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+}
+
+
+@media (max-width:500px) {
+    nav.top {
+        margin: 0;
+        padding-bottom: 0;
+        padding-top: 17px;
+    }
+    nav.top a {
+        margin-right: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin: 20px;
+        align-items: center;
+    }
+
+    .nav-links a{
+        font-size: 21px;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+}
+
+
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    width: 50%;
+    padding: 60px 0;
+    text-align: center;
+    font-size: 63px;
+}
+
+.header-content button {
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.header-content button:hover {
+    background-color: grey;
+}
+
+@media (max-width:800px) {
+    .image-header {
+        display: none;
+    }
+    .header-content {
+        margin: 0 auto;
+        width: 90%;
+        padding: 0px 0;
+        border-bottom: 1px solid black
+    }
+    .header-content h1 {
+        margin-bottom: 0;
+        font-size: 70px;
+    }
+
+    .header-content button {
+        width: 167px;
+        font-size: 15px;
+        height: 30px;
+        margin-bottom: 56px;
+    }
+}
+
+@media (max-width:500px) {
+    .header-content {
+        width: 93%;
+        text-align: center;
+        font-size: 63px;
+        /* margin-bottom: 0px; */
+    }
+
+    .header-content button {
+    margin-bottom: 21px;
+    }
+}
+
+/* HEADER-SERVICES */
+header.servises {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+.services-header-img {
+    width: 100%;
+}
+
+
+.header-content-services {
+    margin: 19px auto;
+}
+
+.header-content-services h1 {
+    font-size: 25px;
+}
+
+/* HEADER-CONTACT */
+header.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-header-img {
+    margin-top: 20px;
+    object-fit: cover;
+    width: 900px;
+    height: 200px;
+}
+
+.header-content-contact {
+    margin-top: 25px;
+}
+
+/* MAIN CONTENT TOP */
+
+.main-content-top {
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 170px;
+}
+
+.main-content-top .features,
+.main-content-top .about {
+    width: 46%;
+}
+
+.middle-img {
+    width: 100%;
+    margin: 20px 0;
+}
+
+@media (max-width:800px) {
+    .main-content-top {
+        height: auto;
+        margin-top: 37px;
+        border-bottom: none;
+        width: 90%;
+        margin-left: 20px;
+    }
+
+    .mdl-img {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:500px) {    
+    .main-content-top {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .main-content-top .features, .main-content-top .about{
+        width: 100%;
+        margin: 26px 0;
+    }
+}
+
+/* SERVICES MAIN CONTENT */
+
+.services-main-content {
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+.services-list {
+    border: 1px solid black;
+    width: 406px;
+    height: 219px;
+    padding: 13px;
+    line-height: 1.125;
+    background-color: rgb(239, 237, 241);
+}
+
+.services-list button {
+    width: 125px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.services-list button:hover {
+    background-color: grey;
+}
+
+/* CONTACT MAIN CONTENT */
+
+.contact-form {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 40px 0;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 17px;
+    margin-bottom: 16px;
+}
+
+input[type=submit] {
+    background-color: grey;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(76, 76, 207);
+}
+
+textarea #subject {
+    height: 200px;
+}
+
+
+
+/* MAIN CONTENT BOTTOM */
+.main-content-bottom {
+    border-top: 2px solid black;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width:800px) {
+    .main-content-bottom {
+    margin-bottom: 28px;
+    height: 222px;
+    width: 100%;
+    padding: 0 30px;
+    border-top: none;
+    }
+}
+
+@media (max-width:500px) {
+    .main-content-bottom {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: 440px;
+        padding: 0 20px;
+        margin-bottom: 40px;
+    }
+
+.main-content-bottom .services, .product, .vision{
+    width: 100%;
+    margin: 0px 0;
+    padding: 0;
+}
+}
+
+/* SERVICES CONTENT BOTTOM */
+
+.services-bottom-content {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-services {
+    width: 400px;
+    height: 300px;
+    line-height: 1.125;
+}
+
+.about-services ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+/* CONTACT FOOTER SECTION */
+
+.contact-info {
+    border-top: 2px solid black;
+    padding-top: 30px;
+    line-height: 1.25;
+}
+
+footer {
+    text-align: center;
+    margin-top: 42px;
+}
+
+@media (max-width:800px) {
+    .contact-info{
+        width: 90%;
+        margin: 0 auto;
+        line-height: inherit;
+    }
+}
